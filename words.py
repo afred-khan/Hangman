@@ -1,5 +1,7 @@
 word_list = [
     'wares',
+    'army',
+    'sophisticated',
     'soup',
     'mount',
     'extend',
@@ -219,6 +221,8 @@ word_list = [
     'abyss',
     'schism',
     'failing',
+    'playstation',
+    'president',
     'guru',
     'trim',
     'alfalfa',
@@ -269,8 +273,10 @@ word_list = [
     'stitch',
     'stub',
     'sabotage',
+    'chubby',
     'parlor',
     'prompt',
+    'articulate',
     'heady',
     'horn',
     'bygone',
@@ -439,6 +445,3 @@ word_list = [
     'hybrid',
     'buffet',
     'lively']
-
-
-
