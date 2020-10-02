@@ -18,23 +18,23 @@ python hangman.py
 
 And the fun starts! Let's start with letter 'a'
 
-![Step1](images/step1.png)
+![ ](images/step1.PNG)
 
 Let's start with letter 'a'
 
-![Step2](images/step2.png)
+![ ](images/step2.PNG)
 
 How lucky we are! Now we enter 'e':
 
-![Step3](images/step3.png)
+![ ](images/step3.PNG)
 
 Oops! Looks like we have run out of luck this time!
 And also you can't have duplicate predictions!
 
-![duplicate](images/step4.png)
+![ ](images/step4.PNG)
 
 The game goes on until you fully guess the word or run out of tries:
 
-![end](images/step5.png)
+![ ](images/step5.PNG)
 
 You can play again by entering Y or end the game by entering N
