@@ -1,9 +1,11 @@
-import random
+import sqlite3
 
-from words import word_list
+db = sqlite3.connect('words.db')
+cursor = db.cursor()
 
 def get_word():
-    word = random.choice(word_list)
+    cursor.execute("SELECT Word FROM WORDS ORDER BY random() LIMIT 1")
+    word = cursor.fetchone()[0]
     return word.upper()
 
 def play(word):
@@ -130,14 +132,12 @@ def display_hangman(tries):
     ]
     return stages[tries]
 
-
 def main():
     word = get_word()
     play(word)
     while input("Play Again? (Y/N) ").upper() == "Y":
         word = get_word()
         play(word)
-
 
 if __name__ == "__main__":
     main()
