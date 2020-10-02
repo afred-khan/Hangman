@@ -9,3 +9,32 @@ when you guesses correct character your chance will not be counted when you give
 
 Hope you enjoy this game. 
 Any modification in this game would be highly appreciated.
+
+## How to play
+To start a new game , run:
+```sh
+python hangman.py
+```
+
+And the fun starts! Let's start with letter 'a'
+
+![Step1](./images/step1.png)
+
+Let's start with letter 'a'
+
+![Step2](./images/step2.png)
+
+How lucky we are! Now we enter 'e':
+
+![Step3](./images/step3.png)
+
+Oops! Looks like we have run out of luck this time!
+And also you can't have duplicate predictions!
+
+![duplicate](./images/step4.png)
+
+The game goes on until you fully guess the word or run out of tries:
+
+![end](./images/step5.png)
+
+You can play again by entering Y or end the game by entering N
