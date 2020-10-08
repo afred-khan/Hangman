@@ -14,7 +14,7 @@ def play(word):
     guessed_letter = []
     guessed_words = []
     tries = 6
-    print("Let's play Hangman!")
+    print("Let's play Hangman!!!")
     print(display_hangman(tries))
     print(word_completion)
     print("\n")
@@ -28,7 +28,7 @@ def play(word):
                 tries -= 1
                 guessed_letter.append(guess)
             else:
-                print("Great!", guess,"is in the word" )
+                print("Great!", guess,"is in the word..you did it ..!!" )
                 guessed_letter.append(guess)
                 word_as_list = list(word_completion)
                 indices = [i for i, letter in enumerate(word) if letter == guess]
