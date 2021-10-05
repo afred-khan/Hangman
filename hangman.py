@@ -60,7 +60,7 @@ def play(word):
     if guessed:
        print("Congratulations! You got the correct word! You won!!")
     else:
-        print("Sorry! You ran out of tries, The word  was " + word + ".Try next time!")
+        print("Sorry! You ran out of tries, The word  was " + word + " .Try next time!")
 
 def display_hangman(tries):
     stages = [  # final state: head, torso, both arms, and both legs
