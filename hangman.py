@@ -139,7 +139,7 @@ def display_hangman(tries):
 def main():
     while True:
         play(get_word())
-        if input("Play Again? (Y/N)") == "N":
+        if input("Play Again? (Y/N) ").upper() == "N":
             break
 
 if __name__ == "__main__":
