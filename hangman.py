@@ -1,10 +1,14 @@
+import sys
 import sqlite3
 
-db = sqlite3.connect('words.db')
-cursor = db.cursor()
-
 def get_word():
-    cursor.execute("SELECT Word FROM WORDS ORDER BY random() LIMIT 1")
+    db = sqlite3.connect('words.db')
+    cursor = db.cursor()
+    try:
+        cursor.execute("SELECT Word FROM WORDS ORDER BY random() LIMIT 1")
+    except sqlite3.OperationalError as err:
+        print("Error Occured while accessing database:",err,end=" ")
+        sys.exit(1)
     word = cursor.fetchone()[0]
     return word.upper()
 
