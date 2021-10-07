@@ -1,8 +1,22 @@
 #!/usr/bin/python
 # Orignial Author : Alireza Rezaei (@Ali-Xoerex)
 
+import os
 import sys
 import sqlite3
+
+def setup():
+    filelist = os.listdir()
+    if not "words.db" in filelist: #Database does not exist
+        print("Database do not exists, Creating Database...")
+        db = sqlite3.connect('words.db')
+        cursor = db.cursor()
+        cursor.execute("CREATE TABLE IF NOT EXISTS Words (Word TEXT NOT NULL UNIQUE)")
+        db.commit()
+        print("Database & Table successfully created!")
+        cursor.execute("INSERT INTO Words VALUES('{}')".format("Apple")) #Adding at least one word
+        db.commit()
+        db.close()
 
 def Quit():
     print("Bye")
@@ -79,6 +93,7 @@ cmd_to_func = {
 }
 
 def main():
+    setup()
     while True:
         command = input("Hangman>> ")
         if command not in cmd_to_func:
